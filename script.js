@@ -78,16 +78,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
 
-const packageTabs = document.querySelectorAll('.package-tab');
-const packagePanels = document.querySelectorAll('.package-panel');
-packageTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    packageTabs.forEach(t => t.classList.remove('active'));
-    packagePanels.forEach(panel => panel.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.tab)?.classList.add('active');
-  });
-});
 
 const packageSelect = document.getElementById('packageSelect');
 document.querySelectorAll('.package-book').forEach(button => {
