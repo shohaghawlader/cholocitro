@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Form | Cholocitro</title>
+  <meta name="description" content="Submit your Cholocitro wedding photography and cinematography booking details." />
+  <meta name="theme-color" content="#130b0b" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="standalone-booking-page">
+  <header class="header scrolled" id="header">
+    <a class="brand" href="index.html#home" aria-label="Cholocitro home">
+      <span class="brand-mark">চলচিত্র</span>
+      <span class="brand-line">Wedding Films &amp; Photography</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="navMenu" aria-label="Primary navigation">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#films">Films</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="#bookingForm" class="nav-cta">Book Now</a>
+    </nav>
+  </header>
+
+  <main class="standalone-booking-shell">
+    <form class="booking-form standalone-booking-form" id="bookingForm" aria-label="Cholocitro booking form">
+      <div class="form-row">
+        <label>Full Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>Phone Number
+          <input type="tel" name="phone" placeholder="01XXXXXXXXX" required />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Event Type
+          <select name="eventType" required>
+            <option value="">Select event type</option>
+            <option>Holud</option>
+            <option>Wedding</option>
+            <option>Reception</option>
+            <option>Holud + Wedding</option>
+            <option>Holud + Wedding + Reception</option>
+            <option>Couple Session</option>
+            <option>Hindu Wedding</option>
+          </select>
+        </label>
+        <label>Event Date
+          <input type="date" name="eventDate" required />
+        </label>
+      </div>
+
+      <label>Event Location
+        <input type="text" name="location" placeholder="Venue / district / area" required />
+      </label>
+
+      <label>Preferred Package
+        <select name="package" id="packageSelect" required>
+          <option value="">Select a package</option>
+          <option>Senior Team Package — Only Photography — ৳10,000</option>
+          <option>Senior Team Package — 1 Program Combo — ৳20,000</option>
+          <option>Senior Team Package — Holud & Wedding — ৳30,000</option>
+          <option>Senior Team Package — Holud / Wedding / Reception — ৳40,000</option>
+          <option>Only Photography — ৳6,000</option>
+          <option>1 Program Combo — ৳12,000</option>
+          <option>Holud & Wedding — ৳24,000</option>
+          <option>Holud / Wedding / Reception — ৳36,000</option>
+          <option>TOP Team Package — Only Photography — ৳7,500</option>
+          <option>TOP Team Package — 1 Program Combo — ৳15,000</option>
+          <option>TOP Team Package — Holud & Wedding — ৳30,000</option>
+          <option>TOP Team Package — Holud / Wedding / Reception — ৳45,000</option>
+          <option>Hindu Special Team — Sanatan Wedding Bride Package Senior — ৳30,000</option>
+          <option>Hindu Special Team — Sanatan Wedding Bride Package Core — ৳36,000</option>
+          <option>Hindu Special Team — Sanatan Wedding Bride Package Top — ৳45,000</option>
+          <option>Custom Package</option>
+        </select>
+      </label>
+
+      <label>Message / Requirements
+        <textarea name="message" rows="4" placeholder="Tell us about your event, timing, number of programs or special requirement..."></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-form">Submit &amp; Open WhatsApp</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html#home">
+          <span class="brand-mark">চলচিত্র</span>
+          <span class="brand-line">Premium Wedding Films &amp; Photography</span>
+        </a>
+        <p>Capturing timeless wedding stories through elegant photography and cinematic films.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#films">Films</a>
+        <a href="index.html#packages">Packages</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="https://wa.me/8801602155907" target="_blank" rel="noopener">WhatsApp: +880 1602-155907</a>
+        <a href="https://www.facebook.com/cholocitro" target="_blank" rel="noopener">Facebook Page</a>
+        <span>Service Area: Bangladesh</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Cholocitro. All rights reserved.</span>
+      <span>Designed for premium wedding storytelling.</span>
+    </div>
+  </footer>
+
+  <script src="booking-form.js"></script>
+</body>
+</html>

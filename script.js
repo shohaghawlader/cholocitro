@@ -79,17 +79,23 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-const packageSelect = document.getElementById('packageSelect');
 document.querySelectorAll('.package-book').forEach(button => {
   button.addEventListener('click', () => {
-    const packageName = button.dataset.package;
-    let existingOption = [...packageSelect.options].find(opt => opt.value === packageName || opt.textContent === packageName);
-    if (!existingOption) {
-      existingOption = new Option(packageName, packageName);
-      packageSelect.add(existingOption);
+    const packageName = button.dataset.package || '';
+    const packageSelect = document.getElementById('packageSelect');
+    const bookingSection = document.getElementById('booking');
+
+    if (packageName && packageSelect) {
+      const matchingOption = [...packageSelect.options].find(
+        option => option.value === packageName || option.textContent.trim() === packageName
+      );
+
+      if (matchingOption) {
+        packageSelect.value = matchingOption.value || matchingOption.textContent;
+      }
     }
-    packageSelect.value = existingOption.value || existingOption.textContent;
-    document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    bookingSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
